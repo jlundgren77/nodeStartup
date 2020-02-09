@@ -28,23 +28,7 @@ MongoClient.connect(
         console.log(result.result);
       })
       .catch(error => console.log(error));
-    // db.collection('users')
-    //   .updateOne(
-    //     {
-    //       _id: new ObjectID('5de5520cc0d7ee3b20d43664')
-    //     },
-    //     {
-    //       $inc: {
-    //         age: 1
-    //       }
-    //     }
-    //   )
-    //   .then(result => {
-    //     console.log(result);
-    //   })
-    //   .catch(error => {
-    //     console.log(error);
-    //   });
+
     db.collection('tasks')
       .updateMany(
         {

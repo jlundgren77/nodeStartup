@@ -60,7 +60,7 @@ UserSchema.virtual('tasks', {
 });
 UserSchema.methods.generateAuthToken = async function() {
   const user = this;
-  const token = jwt.sign({ _id: user._id.toString() }, 'thisismynewcourse');
+  const token = jwt.sign({ _id: user._id.toString() }, proecss.env.JWT_SECRET);
 
   user.tokens = user.tokens.concat({ token });
   await user.save();
