@@ -14,7 +14,12 @@ mongoose
     );
   })
   .catch(error => {
-    console.log('Error establishing MongoDB connection. Error:', error.message);
+    console.log(
+      'Error establishing MongoDB connection. Error:',
+      error,
+      'URL SHOULD BE:  ',
+      process.env.MONGODB_URL
+    );
   });
 
 // var task1 = new Task({
